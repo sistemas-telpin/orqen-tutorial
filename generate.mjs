@@ -23,7 +23,9 @@ if (current !== states.State.CLOSED || steps.at(-1).event) throw new Error("Tuto
 
 const bundle = JSON.stringify({ source, projectUrl: project.url, columns, cards, guidedCard, steps }, null, 2) + "\n";
 if (mode === "--check") {
-  if (readFileSync(output, "utf8") !== bundle) throw new Error("The GUI tutorial bundle is out of date");
+  if (readFileSync(output, "utf8").replaceAll("\r\n", "\n") !== bundle) {
+    throw new Error("The GUI tutorial bundle is out of date");
+  }
 } else {
   writeFileSync(output, bundle);
 }
