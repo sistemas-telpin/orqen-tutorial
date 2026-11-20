@@ -1,0 +1,3 @@
+{ "description": "Agregar docs/interno.md con una nota de prueba del desarrollo interno.",
+  "acceptance_criteria": ["Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno."],
+  "plan": ["Crear docs/interno.md (0.5h)"], "estimated_hours": 0.5 }

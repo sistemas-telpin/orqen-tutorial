@@ -1,0 +1,20 @@
+{
+  "summary": "Agregar docs/interno.md con una nota de prueba del desarrollo interno.",
+  "type": "change",
+  "acceptance_criteria": [
+    "Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno."
+  ],
+  "affected_capabilities": [],
+  "decisions": [],
+  "open_questions": [],
+  "risks": [],
+  "ready": true,
+  "analyst_ok": true,
+  "route": "development",
+  "lane": "direct",
+  "lane_rationale": "Internal development: no client request, direct lane.",
+  "plan": [
+    "Crear docs/interno.md (0.5h)"
+  ],
+  "estimated_hours": 0.5
+}

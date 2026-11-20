@@ -1,0 +1,1 @@
+{ "completed": true, "changes_summary": "Se agregó docs/interno.md y su test.", "modified_files": ["docs/interno.md", "scripts/orqen-interno.test.cjs"], "added_tests": ["scripts/orqen-interno.test.cjs"] }

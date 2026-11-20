@@ -1,0 +1,19 @@
+{
+  "key": "INT-1",
+  "title": "Nota de prueba interna",
+  "description": "Agregar docs/interno.md con una nota de prueba del desarrollo interno.",
+  "status": "Abierto",
+  "labels": [
+    "orqen-state-development"
+  ],
+  "created": "2026-11-20T14:42:09.181Z",
+  "comments": [
+    {
+      "id": "1795185729190-1",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] *Analysis* (analyst: Enzo Sives)\nAgregar docs/interno.md con una nota de prueba del desarrollo interno.\n\n*Type:* change\n\n*Acceptance criteria:*\n* Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno.\n\n*Lane:* direct — Internal development: no client request, direct lane.\n*Plan:*\n# Crear docs/interno.md (0.5h)\n*Estimate:* 0.5 h",
+      "created": "2026-11-20T14:42:09.190Z"
+    }
+  ]
+}
