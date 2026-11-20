@@ -1,0 +1,4 @@
+{ "scenarios": [
+    { "requirement": "Acceptance criterion", "scenario": "Dado el repositorio, cuando se abre docs/prueba-orqen.md, entonces existe y su primera línea es '# Prueba de orqen'.", "covered": true, "test": "scripts/orqen-prueba.test.cjs::existe y su primera línea es el título" },
+    { "requirement": "Acceptance criterion", "scenario": "Dado el archivo, cuando se lee, entonces menciona a orqen.", "covered": true, "test": "scripts/orqen-prueba.test.cjs::menciona a orqen" } ],
+  "failure_diagnosis": "", "suggestions": [], "coverage_ok": true }

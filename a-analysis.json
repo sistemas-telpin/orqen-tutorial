@@ -1,0 +1,8 @@
+{ "summary": "Agregar docs/prueba-orqen.md con un título y una línea que indique que lo generó orqen.",
+  "type": "change",
+  "acceptance_criteria": ["Dado el repositorio, cuando se abre docs/prueba-orqen.md, entonces existe y su primera línea es '# Prueba de orqen'.", "Dado el archivo, cuando se lee, entonces menciona a orqen."],
+  "affected_capabilities": [], "open_questions": [], "risks": [],
+  "ready": true, "analyst_ok": true, "route": "development", "lane": "direct",
+  "lane_rationale": "Un solo archivo de documentación.",
+  "plan": ["Crear docs/prueba-orqen.md.", "Agregar scripts/orqen-prueba.test.cjs que lo verifique."],
+  "estimated_hours": 0.5 }
