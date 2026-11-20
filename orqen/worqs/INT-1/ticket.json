@@ -4,7 +4,7 @@
   "description": "Agregar docs/interno.md con una nota de prueba del desarrollo interno.",
   "status": "Abierto",
   "labels": [
-    "orqen-state-development"
+    "orqen-state-testing"
   ],
   "created": "2026-11-20T14:42:09.181Z",
   "comments": [
@@ -21,6 +21,13 @@
       "authorName": "orqen",
       "body": "[orqen] Development complete on branch `orqen/int-1`.\nSe agregó docs/interno.md y su test.\n\nTests added:\n* scripts/orqen-interno.test.cjs\nMoving to testing.",
       "created": "2026-11-20T14:47:11.406Z"
+    },
+    {
+      "id": "1795186044948-3",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Tests passed and all scenarios are covered:\n- ✔ Acceptance criterion › Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno. (scripts/orqen-interno.test.cjs::docs/interno.md existe y menciona el desarrollo interno)\n\nBranch `orqen/int-1` (the PR to *prueba/flujo-base* is opened with /orqen:pr)\nCode review: comment */approve* or */reject <reason>*.",
+      "created": "2026-11-20T14:47:24.948Z"
     }
   ]
 }
