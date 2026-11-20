@@ -1,0 +1,68 @@
+{
+  "key": "INT-2",
+  "title": "Desarrollo rapido",
+  "description": "Agregar documentación general del proyecto en docs/. Cubre qué es el repo, cómo funcionan scenario.mjs y generate.mjs, cómo correr los tests de scripts/ y cómo se relaciona con orqen, orqen-gui y el Kanban de referencia, para que quien llega nuevo entienda el repo sin leer el código.",
+  "status": "Abierto",
+  "labels": [
+    "orqen-state-code_review"
+  ],
+  "created": "2026-11-20T15:50:25.695Z",
+  "comments": [
+    {
+      "id": "1795189825713-1",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] *Analysis* (analyst: Enzo Sives)\nAgregar documentación general del proyecto en docs/. Cubre qué es el repo, cómo funcionan scenario.mjs y generate.mjs, cómo correr los tests de scripts/ y cómo se relaciona con orqen, orqen-gui y el Kanban de referencia, para que quien llega nuevo entienda el repo sin leer el código.\n\n*Type:* change\n\n*Acceptance criteria:*\n* Dado el repo, cuando se abre docs/, entonces existe un docs/README.md que sirve de índice y enlaza a todos los documentos, incluidos interno.md y prueba-orqen.md.\n* Dado docs/, cuando una persona nueva lo lee, entonces encuentra un documento de arquitectura que explica el rol de scenario.mjs, generate.mjs y orqen/.\n* Dado docs/, cuando se busca cómo probar, entonces hay una guía que indica cómo ejecutar los tests de scripts/ (node --test) y qué cubre cada uno.\n* Dado cualquier enlace relativo en docs/, cuando se sigue, entonces apunta a un archivo existente.\n\n*Lane:* direct — Internal development: no client request, direct lane.\n*Plan:*\n# Revisar el código y los docs existentes (1h)\n# Escribir docs/README.md como índice (1h)\n# Escribir docs/arquitectura.md (2h)\n# Escribir docs/pruebas.md (1h)\n# Revisar enlaces y consistencia con el README raíz (1h)\n*Estimate:* 6 h",
+      "created": "2026-11-20T15:50:25.713Z"
+    },
+    {
+      "id": "1795193233223-2",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Development complete on branch `orqen/int-2`.\nSe agregó documentación general en docs/: README.md (índice), arquitectura.md (scenario.mjs, generate.mjs, project.json, orqen/ y relación con orqen, orqen-gui y el Kanban de referencia) y pruebas.md (cómo correr `node --test` y qué cubre cada test). Se agregó scripts/docs-links.test.cjs, que verifica que los enlaces relativos de docs/ existan y que el índice enlace a todos los documentos. Desviación: se documenta `node --test` en lugar de `node --test scripts/`, que falla en Node 22. Detalle menor: arquitectura.md dice que orqen/state/ no aparece como carpeta, pero existe.\n\nTests added:\n* scripts/docs-links.test.cjs\nMoving to testing.",
+      "created": "2026-11-20T16:47:13.223Z"
+    },
+    {
+      "id": "1795193526547-3",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Tests passed and all scenarios are covered:\n- ✔ Acceptance criterion › Dado el repo, cuando se abre docs/, entonces existe un docs/README.md que sirve de índice y enlaza a todos los documentos, incluidos interno.md y prueba-orqen.md. (scripts/docs-links.test.cjs::docs/README.md enlaza a todos los documentos de docs/)\n- ✔ Acceptance criterion › Dado docs/, cuando una persona nueva lo lee, entonces encuentra un documento de arquitectura que explica el rol de scenario.mjs, generate.mjs y orqen/. (Sin test automatizado: verificado por revisión manual de docs/arquitectura.md (secciones scenario.mjs, generate.mjs y orqen/), aceptado por la persona. El test docs-links solo comprueba que el archivo está enlazado desde el índice.)\n- ✔ Acceptance criterion › Dado docs/, cuando se busca cómo probar, entonces hay una guía que indica cómo ejecutar los tests de scripts/ (node --test) y qué cubre cada uno. (Sin test automatizado: verificado por revisión manual de docs/pruebas.md (comando `node --test` y tabla de qué cubre cada test), aceptado por la persona. El test docs-links solo comprueba que el archivo está enlazado desde el índice.)\n- ✔ Acceptance criterion › Dado cualquier enlace relativo en docs/, cuando se sigue, entonces apunta a un archivo existente. (scripts/docs-links.test.cjs::los enlaces relativos de docs/ apuntan a archivos existentes)\n\nBranch `orqen/int-2` (the PR to *prueba/flujo-base* is opened with /orqen:pr)\nCode review: comment */approve* or */reject <reason>*.",
+      "created": "2026-11-20T16:52:06.547Z"
+    },
+    {
+      "id": "1795193804712-4",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] PR to *prueba/flujo-base* opened from branch `orqen/int-2`: https://github.com/sistemas-telpin/orqen-tutorial/pull/10",
+      "created": "2026-11-20T16:56:44.712Z"
+    },
+    {
+      "id": "1795194682507-5",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] *Code review #1* (round 1) — verdict: *Approvable with minor changes*\nPR: https://github.com/sistemas-telpin/orqen-tutorial/pull/10\n\n# Informe de revisión: INT-2 (PR #10, commit 826da0c)\n\n**Veredicto: aprobable con cambios menores.** Cumple los 4 criterios de aceptación; sin hallazgos bloqueantes.\n\n## Resumen\nAgrega docs/README.md, docs/arquitectura.md, docs/pruebas.md y scripts/docs-links.test.cjs. No toca código existente. El contenido de arquitectura.md coincide con scenario.mjs, generate.mjs y project.json. `node --test`: 5/5. Criterios 1 y 4 con test; 2 y 3 solo por revisión manual.\n\n## Hallazgos\n- #1 · minor · docs/arquitectura.md (sección 5, `state/`): dice que no aparece como carpeta, pero existe donde orqen ya corrió (está en .gitignore:2). Solución: indicar que se crea al usar orqen y no se versiona.\n- #2 · minor · docs/README.md:10, docs/arquitectura.md: mezcla de voseo y tuteo. Solución: unificar en tuteo, sin tocar los títulos citados de scenario.mjs.\n- #3 · minor, fuera del diff · orqen/environment.yaml:16: tests.unit solo corre orqen-interno.test.cjs, así que TESTING no ejecuta docs-links.test.cjs. Solución: tarea aparte, cambiarlo a `node --test`.",
+      "created": "2026-11-20T17:11:22.507Z"
+    },
+    {
+      "id": "1795194684453-6",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Code review: changes requested by Enzo Sives on https://github.com/sistemas-telpin/orqen-tutorial/pull/10\n\nCambios solicitados en INT-2\n\n1. `docs/arquitectura.md` (sección 5, punto `state/`): la frase \"en este repo no aparece como carpeta\" confunde. Reescribir indicando que `orqen/state/` se crea al usar orqen y está en `.gitignore`, así que no se versiona.\n2. `docs/README.md:10`, `docs/arquitectura.md` y `docs/pruebas.md`: unificar el tono en tuteo (\"vuelve\", \"ejecuta\"). No tocar los títulos de pasos citados de `scenario.mjs`.\n\nReturning to development.",
+      "created": "2026-11-20T17:11:24.453Z"
+    },
+    {
+      "id": "1795195148458-7",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Development complete on branch `orqen/int-2`.\nSe atendieron los cambios pedidos en la revisión del PR #10. docs/arquitectura.md: el punto `state/` ahora indica que orqen/state/ se crea al usar orqen y está en .gitignore, por lo que no se versiona (puede guardarse en cli/.state/ según la configuración). docs/README.md: 'volvé' pasa a 'vuelve' para unificar en tuteo; docs/pruebas.md ya estaba en tuteo. Los títulos de pasos citados de scenario.mjs no se tocaron. node --test: 5/5. Fuera de alcance: cambiar tests.unit en orqen/environment.yaml (hallazgo #3 del senior, tarea aparte).\n\nTests added:\n_(none)_\nMoving to testing.",
+      "created": "2026-11-20T17:19:08.458Z"
+    },
+    {
+      "id": "1795195186208-8",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Tests passed and all scenarios are covered:\n- ✔ Acceptance criterion › Dado el repo, cuando se abre docs/, entonces existe un docs/README.md que sirve de índice y enlaza a todos los documentos, incluidos interno.md y prueba-orqen.md. (scripts/docs-links.test.cjs::docs/README.md enlaza a todos los documentos de docs/)\n- ✔ Acceptance criterion › Dado docs/, cuando una persona nueva lo lee, entonces encuentra un documento de arquitectura que explica el rol de scenario.mjs, generate.mjs y orqen/. (Sin test automatizado: verificado por revisión manual de docs/arquitectura.md (secciones scenario.mjs, generate.mjs y orqen/), aceptado por la persona. El test docs-links solo comprueba que el archivo está enlazado desde el índice.)\n- ✔ Acceptance criterion › Dado docs/, cuando se busca cómo probar, entonces hay una guía que indica cómo ejecutar los tests de scripts/ (node --test) y qué cubre cada uno. (Sin test automatizado: verificado por revisión manual de docs/pruebas.md (comando `node --test` y tabla de qué cubre cada test), aceptado por la persona. El test docs-links solo comprueba que el archivo está enlazado desde el índice.)\n- ✔ Acceptance criterion › Dado cualquier enlace relativo en docs/, cuando se sigue, entonces apunta a un archivo existente. (scripts/docs-links.test.cjs::los enlaces relativos de docs/ apuntan a archivos existentes)\n\nPR to *prueba/flujo-base*: https://github.com/sistemas-telpin/orqen-tutorial/pull/10\nCode review: comment */approve* or */reject <reason>*.",
+      "created": "2026-11-20T17:19:46.208Z"
+    }
+  ]
+}
