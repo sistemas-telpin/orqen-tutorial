@@ -4,7 +4,7 @@
   "description": "Agregar documentación general del proyecto en docs/. Cubre qué es el repo, cómo funcionan scenario.mjs y generate.mjs, cómo correr los tests de scripts/ y cómo se relaciona con orqen, orqen-gui y el Kanban de referencia, para que quien llega nuevo entienda el repo sin leer el código.",
   "status": "Abierto",
   "labels": [
-    "orqen-state-code_review"
+    "orqen-state-development"
   ],
   "created": "2026-11-20T15:50:25.695Z",
   "comments": [
