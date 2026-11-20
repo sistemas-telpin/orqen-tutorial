@@ -7,4 +7,4 @@ Esta carpeta explica el repositorio de referencia para el tutorial interactivo d
 - [interno.md](interno.md): nota interna generada por un desarrollo interno de orqen (sin pedido ni issue).
 - [prueba-orqen.md](prueba-orqen.md): documento de prueba generado por el flujo de orqen.
 
-Para el contexto general del proyecto, volvé al [README principal](../README.md).
+Para el contexto general del proyecto, vuelve al [README principal](../README.md).
