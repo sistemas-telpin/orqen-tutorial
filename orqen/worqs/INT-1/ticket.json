@@ -1,0 +1,33 @@
+{
+  "key": "INT-1",
+  "title": "Nota de prueba interna",
+  "description": "Agregar docs/interno.md con una nota de prueba del desarrollo interno.",
+  "status": "Abierto",
+  "labels": [
+    "orqen-state-code_review"
+  ],
+  "created": "2026-11-20T14:42:09.181Z",
+  "comments": [
+    {
+      "id": "1795185729190-1",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] *Analysis* (analyst: Enzo Sives)\nAgregar docs/interno.md con una nota de prueba del desarrollo interno.\n\n*Type:* change\n\n*Acceptance criteria:*\n* Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno.\n\n*Lane:* direct — Internal development: no client request, direct lane.\n*Plan:*\n# Crear docs/interno.md (0.5h)\n*Estimate:* 0.5 h",
+      "created": "2026-11-20T14:42:09.190Z"
+    },
+    {
+      "id": "1795186031406-2",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Development complete on branch `orqen/int-1`.\nSe agregó docs/interno.md y su test.\n\nTests added:\n* scripts/orqen-interno.test.cjs\nMoving to testing.",
+      "created": "2026-11-20T14:47:11.406Z"
+    },
+    {
+      "id": "1795186044948-3",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Tests passed and all scenarios are covered:\n- ✔ Acceptance criterion › Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno. (scripts/orqen-interno.test.cjs::docs/interno.md existe y menciona el desarrollo interno)\n\nBranch `orqen/int-1` (the PR to *prueba/flujo-base* is opened with /orqen:pr)\nCode review: comment */approve* or */reject <reason>*.",
+      "created": "2026-11-20T14:47:24.948Z"
+    }
+  ]
+}

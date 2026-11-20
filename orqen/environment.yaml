@@ -13,4 +13,4 @@ prepare: []
 migrate: []
 seed: []
 tests:
-  unit: node --test scripts/orqen-prueba.test.cjs
+  unit: node --test scripts/orqen-interno.test.cjs

@@ -1,0 +1,2 @@
+{ "scenarios": [ { "requirement": "Acceptance criterion", "scenario": "Dado el repositorio, cuando se abre docs/interno.md, entonces existe y menciona el desarrollo interno.", "covered": true, "test": "scripts/orqen-interno.test.cjs::docs/interno.md existe y menciona el desarrollo interno" } ],
+  "failure_diagnosis": "", "suggestions": [], "coverage_ok": true }

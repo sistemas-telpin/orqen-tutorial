@@ -1,0 +1,3 @@
+{ "release_notes": "Se agregó docs/prueba-orqen.md y un test que lo verifica (prueba del flujo de orqen).",
+  "client_message": "Ya está disponible el archivo docs/prueba-orqen.md, con el título y la mención a orqen que pediste. Podés verlo en la rama de prueba del repositorio.",
+  "validation_steps": ["Abrir docs/prueba-orqen.md en la rama prueba/flujo-base.", "Verificar que la primera línea es '# Prueba de orqen' y que el texto menciona a orqen."] }
