@@ -1,0 +1,25 @@
+# orqen configuration for the 9-step flow: project, connectors (where the tickets live) and workflow. Edit as needed.
+# Tokens never go here: they live in ~/.orqen/credentials.env. How the project starts is in orqen/environment.yaml.
+version: 1
+orqen:
+  cli: 0.1.5
+  kit: 0.1.5
+project:
+  name: tut
+  base_branch: main
+agent: {}
+openspec:
+  install: global
+  tools: []
+workflow:
+  support: false
+  approvers:
+    analysis: []
+    qa: []
+    code: []
+    client: []
+    execution: []
+  code_review:
+    gate: github
+    reviewers: []
+  devel_branch: desarrollo
