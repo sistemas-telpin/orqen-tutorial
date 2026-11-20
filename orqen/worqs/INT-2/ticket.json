@@ -35,6 +35,20 @@
       "authorName": "orqen",
       "body": "[orqen] PR to *prueba/flujo-base* opened from branch `orqen/int-2`: https://github.com/sistemas-telpin/orqen-tutorial/pull/10",
       "created": "2026-11-20T16:56:44.712Z"
+    },
+    {
+      "id": "1795194682507-5",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] *Code review #1* (round 1) — verdict: *Approvable with minor changes*\nPR: https://github.com/sistemas-telpin/orqen-tutorial/pull/10\n\n# Informe de revisión: INT-2 (PR #10, commit 826da0c)\n\n**Veredicto: aprobable con cambios menores.** Cumple los 4 criterios de aceptación; sin hallazgos bloqueantes.\n\n## Resumen\nAgrega docs/README.md, docs/arquitectura.md, docs/pruebas.md y scripts/docs-links.test.cjs. No toca código existente. El contenido de arquitectura.md coincide con scenario.mjs, generate.mjs y project.json. `node --test`: 5/5. Criterios 1 y 4 con test; 2 y 3 solo por revisión manual.\n\n## Hallazgos\n- #1 · minor · docs/arquitectura.md (sección 5, `state/`): dice que no aparece como carpeta, pero existe donde orqen ya corrió (está en .gitignore:2). Solución: indicar que se crea al usar orqen y no se versiona.\n- #2 · minor · docs/README.md:10, docs/arquitectura.md: mezcla de voseo y tuteo. Solución: unificar en tuteo, sin tocar los títulos citados de scenario.mjs.\n- #3 · minor, fuera del diff · orqen/environment.yaml:16: tests.unit solo corre orqen-interno.test.cjs, así que TESTING no ejecuta docs-links.test.cjs. Solución: tarea aparte, cambiarlo a `node --test`.",
+      "created": "2026-11-20T17:11:22.507Z"
+    },
+    {
+      "id": "1795194684453-6",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Code review: changes requested by Enzo Sives on https://github.com/sistemas-telpin/orqen-tutorial/pull/10\n\nCambios solicitados en INT-2\n\n1. `docs/arquitectura.md` (sección 5, punto `state/`): la frase \"en este repo no aparece como carpeta\" confunde. Reescribir indicando que `orqen/state/` se crea al usar orqen y está en `.gitignore`, así que no se versiona.\n2. `docs/README.md:10`, `docs/arquitectura.md` y `docs/pruebas.md`: unificar el tono en tuteo (\"vuelve\", \"ejecuta\"). No tocar los títulos de pasos citados de `scenario.mjs`.\n\nReturning to development.",
+      "created": "2026-11-20T17:11:24.453Z"
     }
   ]
 }
