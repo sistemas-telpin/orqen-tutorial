@@ -4,7 +4,7 @@
   "description": "Agregar documentación general del proyecto en docs/. Cubre qué es el repo, cómo funcionan scenario.mjs y generate.mjs, cómo correr los tests de scripts/ y cómo se relaciona con orqen, orqen-gui y el Kanban de referencia, para que quien llega nuevo entienda el repo sin leer el código.",
   "status": "Abierto",
   "labels": [
-    "orqen-state-development"
+    "orqen-state-testing"
   ],
   "created": "2026-11-20T15:50:25.695Z",
   "comments": [
@@ -56,6 +56,13 @@
       "authorName": "orqen",
       "body": "[orqen] Development complete on branch `orqen/int-2`.\nSe atendieron los cambios pedidos en la revisión del PR #10. docs/arquitectura.md: el punto `state/` ahora indica que orqen/state/ se crea al usar orqen y está en .gitignore, por lo que no se versiona (puede guardarse en cli/.state/ según la configuración). docs/README.md: 'volvé' pasa a 'vuelve' para unificar en tuteo; docs/pruebas.md ya estaba en tuteo. Los títulos de pasos citados de scenario.mjs no se tocaron. node --test: 5/5. Fuera de alcance: cambiar tests.unit en orqen/environment.yaml (hallazgo #3 del senior, tarea aparte).\n\nTests added:\n_(none)_\nMoving to testing.",
       "created": "2026-11-20T17:19:08.458Z"
+    },
+    {
+      "id": "1795195186208-8",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Tests passed and all scenarios are covered:\n- ✔ Acceptance criterion › Dado el repo, cuando se abre docs/, entonces existe un docs/README.md que sirve de índice y enlaza a todos los documentos, incluidos interno.md y prueba-orqen.md. (scripts/docs-links.test.cjs::docs/README.md enlaza a todos los documentos de docs/)\n- ✔ Acceptance criterion › Dado docs/, cuando una persona nueva lo lee, entonces encuentra un documento de arquitectura que explica el rol de scenario.mjs, generate.mjs y orqen/. (Sin test automatizado: verificado por revisión manual de docs/arquitectura.md (secciones scenario.mjs, generate.mjs y orqen/), aceptado por la persona. El test docs-links solo comprueba que el archivo está enlazado desde el índice.)\n- ✔ Acceptance criterion › Dado docs/, cuando se busca cómo probar, entonces hay una guía que indica cómo ejecutar los tests de scripts/ (node --test) y qué cubre cada uno. (Sin test automatizado: verificado por revisión manual de docs/pruebas.md (comando `node --test` y tabla de qué cubre cada test), aceptado por la persona. El test docs-links solo comprueba que el archivo está enlazado desde el índice.)\n- ✔ Acceptance criterion › Dado cualquier enlace relativo en docs/, cuando se sigue, entonces apunta a un archivo existente. (scripts/docs-links.test.cjs::los enlaces relativos de docs/ apuntan a archivos existentes)\n\nPR to *prueba/flujo-base*: https://github.com/sistemas-telpin/orqen-tutorial/pull/10\nCode review: comment */approve* or */reject <reason>*.",
+      "created": "2026-11-20T17:19:46.208Z"
     }
   ]
 }
