@@ -6,11 +6,7 @@ orqen:
   kit: 0.1.5
 project:
   name: tut
-  base_branch: main
-agent: {}
-openspec:
-  install: global
-  tools: []
+  base_branch: prueba/flujo-base
 workflow:
   support: false
   approvers:
@@ -20,6 +16,15 @@ workflow:
     client: []
     execution: []
   code_review:
-    gate: github
+    gate: ticket
     reviewers: []
-  devel_branch: desarrollo
+  devel_branch: prueba/flujo-base
+agent: {}
+openspec:
+  install: global
+  tools: []
+connectors:
+  requests:
+    type: github
+    filter: is:open label:orqen-prueba
+    repo: sistemas-telpin/orqen-tutorial

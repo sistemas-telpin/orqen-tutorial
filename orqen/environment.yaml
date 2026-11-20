@@ -12,4 +12,5 @@ variables: {}
 prepare: []
 migrate: []
 seed: []
-tests: {}
+tests:
+  unit: node --test scripts/orqen-prueba.test.cjs
