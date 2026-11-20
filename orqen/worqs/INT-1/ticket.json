@@ -4,7 +4,7 @@
   "description": "Agregar docs/interno.md con una nota de prueba del desarrollo interno.",
   "status": "Abierto",
   "labels": [
-    "orqen-state-testing"
+    "orqen-state-code_review"
   ],
   "created": "2026-11-20T14:42:09.181Z",
   "comments": [
