@@ -121,7 +121,7 @@ Esta carpeta contiene la configuración de ORQEN para el proyecto de prueba. **L
 - `manifest.json`: versión del kit y huellas (hash) de los archivos de `orqen/`. `plugin/`: el plugin de ORQEN (comandos y skills).
 - `stages/*.md`: instrucciones de cada etapa: `analysis`, `delivery`, `development`, `execution`, `specification`, `support`, `testing` y `verification`.
 - `worqs/`: el registro de cada pedido (un **worq**: el pedido, su issue, la rama, la especificación, el PR y el historial de cada etapa), en carpetas con la clave del pedido, por ejemplo `INT-1/`. Ver [`orqen/worqs/README.md`](../orqen/worqs/README.md).
-- `state/`: el estado del flujo de trabajo. En este repo no aparece como carpeta; según la configuración, orqen lo guarda aquí o en `cli/.state/`.
+- `state/`: el estado del flujo de trabajo. orqen crea `orqen/state/` al usarse y está listado en `.gitignore`, así que no se versiona. Según la configuración, orqen puede guardarlo en `cli/.state/` en lugar de aquí.
 
 Los cambios de un pedido se hacen con los comandos de ORQEN (`/orqen:*` u `orqen <comando>`), no editando estos archivos. Ver el flujo en [`AGENTS.md`](../AGENTS.md).
 
