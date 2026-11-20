@@ -14,6 +14,13 @@
       "authorName": "orqen",
       "body": "[orqen] *Analysis* (analyst: Enzo Sives)\nAgregar documentación general del proyecto en docs/. Cubre qué es el repo, cómo funcionan scenario.mjs y generate.mjs, cómo correr los tests de scripts/ y cómo se relaciona con orqen, orqen-gui y el Kanban de referencia, para que quien llega nuevo entienda el repo sin leer el código.\n\n*Type:* change\n\n*Acceptance criteria:*\n* Dado el repo, cuando se abre docs/, entonces existe un docs/README.md que sirve de índice y enlaza a todos los documentos, incluidos interno.md y prueba-orqen.md.\n* Dado docs/, cuando una persona nueva lo lee, entonces encuentra un documento de arquitectura que explica el rol de scenario.mjs, generate.mjs y orqen/.\n* Dado docs/, cuando se busca cómo probar, entonces hay una guía que indica cómo ejecutar los tests de scripts/ (node --test) y qué cubre cada uno.\n* Dado cualquier enlace relativo en docs/, cuando se sigue, entonces apunta a un archivo existente.\n\n*Lane:* direct — Internal development: no client request, direct lane.\n*Plan:*\n# Revisar el código y los docs existentes (1h)\n# Escribir docs/README.md como índice (1h)\n# Escribir docs/arquitectura.md (2h)\n# Escribir docs/pruebas.md (1h)\n# Revisar enlaces y consistencia con el README raíz (1h)\n*Estimate:* 6 h",
       "created": "2026-11-20T15:50:25.713Z"
+    },
+    {
+      "id": "1795193233223-2",
+      "author": "orqen",
+      "authorName": "orqen",
+      "body": "[orqen] Development complete on branch `orqen/int-2`.\nSe agregó documentación general en docs/: README.md (índice), arquitectura.md (scenario.mjs, generate.mjs, project.json, orqen/ y relación con orqen, orqen-gui y el Kanban de referencia) y pruebas.md (cómo correr `node --test` y qué cubre cada test). Se agregó scripts/docs-links.test.cjs, que verifica que los enlaces relativos de docs/ existan y que el índice enlace a todos los documentos. Desviación: se documenta `node --test` en lugar de `node --test scripts/`, que falla en Node 22. Detalle menor: arquitectura.md dice que orqen/state/ no aparece como carpeta, pero existe.\n\nTests added:\n* scripts/docs-links.test.cjs\nMoving to testing.",
+      "created": "2026-11-20T16:47:13.223Z"
     }
   ]
 }
