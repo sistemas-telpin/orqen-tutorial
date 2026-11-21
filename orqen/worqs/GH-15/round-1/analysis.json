@@ -1,0 +1,22 @@
+{
+  "summary": "Agregar docs/flujo-completo.md con el título '# Flujo completo de orqen' y la lista de los 9 pasos del flujo.",
+  "type": "change",
+  "acceptance_criteria": [
+    "Dado el repositorio, cuando se abre docs/flujo-completo.md, entonces su primera línea es '# Flujo completo de orqen'.",
+    "Dado el archivo, cuando se lee, entonces lista los 9 pasos del flujo numerados del 1 al 9."
+  ],
+  "affected_capabilities": [],
+  "decisions": [],
+  "open_questions": [],
+  "risks": [],
+  "ready": true,
+  "analyst_ok": true,
+  "route": "development",
+  "lane": "direct",
+  "lane_rationale": "Un solo archivo de documentación y su test, sin riesgo.",
+  "plan": [
+    "Crear docs/flujo-completo.md con el título y los 9 pasos (0.25h).",
+    "Agregar scripts/flujo-completo.test.cjs que verifique título y pasos (0.25h)."
+  ],
+  "estimated_hours": 0.5
+}
